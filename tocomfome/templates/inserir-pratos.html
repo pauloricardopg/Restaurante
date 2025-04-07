@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}ADMIN{% endblock title %}
+
+
+
+{% block body %}
+    <div class="container">
+        <h1>Insira os produtos do cardapio</h1>
+        <div class="row">
+            <div class="col">
+                <form method="POST" action="" class="border p-4 mt-2">
+                    {{ form_prato.csrf_token }}
+                    <legend>Prato</legend>
+                    <fieldset>
+                        <div class="form-group">
+                            {{ form_prato.nome_prato.label(class= "form-control-label") }}
+                            {{ form_prato.nome_prato(class= "form-control", value=form_prato.nome_prato.data if form_prato.nome_prato.data else '') }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_prato.preco_prato.label(class= "form-control-label") }}
+                            {{ form_prato.preco_prato(class= "form-control", value=form_prato.preco_prato.data if form_prato.preco_prato.data else '') }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_prato.ingredientes_prato.label(class= "form-control-label") }}
+                            {{ form_prato.ingredientes_prato(class= "form-control", value=form_prato.ingredientes_prato.data if form_prato.ingredientes_prato.data else '') }}
+                        </div>
+                    </fieldset>
+                    {{ form_prato.botao_submit_prato(class="btn btn-primary border mt-2") }}
+                </form>
+            </div>
+            <div class="col">
+                <form method="POST" action="" class="border p-4 mt-2">
+                    {{ form_sobremesa.csrf_token }}
+                    <legend>Sobremesa</legend>
+                    <fieldset>
+                        <div class="form-group">
+                            {{ form_sobremesa.nome_sobremesa.label(class= "form-control-label") }}
+                            {{ form_sobremesa.nome_sobremesa(class= "form-control", value=form_sobremesa.nome_sobremesa.data if form_sobremesa.nome_sobremesa.data else '') }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_sobremesa.preco_sobremesa.label(class= "form-control-label") }}
+                            {{ form_sobremesa.preco_sobremesa(class= "form-control", value=form_sobremesa.preco_sobremesa.data if form_sobremesa.preco_sobremesa.data else '') }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_sobremesa.ingredientes_sobremesa.label(class= "form-control-label") }}
+                            {{ form_sobremesa.ingredientes_sobremesa(class= "form-control", value=form_sobremesa.ingredientes_sobremesa.data if form_sobremesa.ingredientes_sobremesa.data else '') }}
+                        </div>
+                    </fieldset>
+                    {{ form_sobremesa.botao_submit_sobremesa(class="btn btn-primary border mt-2") }}
+                </form>
+            </div>
+            <div class="col">
+                <form method="POST" action="" class="border p-4 mt-2">
+                    {{ form_bebida.csrf_token }}
+                    <legend>Bebida</legend>
+                    <fieldset>
+                        <div class="form-group">
+                            {{ form_bebida.nome_bebida.label(class= "form-control-label") }}
+                            {{ form_bebida.nome_bebida(class= "form-control", value=form_bebida.nome_bebida.data if form_bebida.nome_bebida.data else '') }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_bebida.preco_bebida.label(class= "form-control-label") }}
+                            {{ form_bebida.preco_bebida(class= "form-control", value=form_bebida.preco_bebida.data if form_bebida.preco_bebida.data else '') }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_bebida.teor_alcoolico.label(class= "form-control-label") }}
+                            {{ form_bebida.teor_alcoolico(class= "form-control", value=form_bebida.teor_alcoolico.data if form_bebida.teor_alcoolico.data else '') }}
+                        </div>
+                    </fieldset>
+                        {{ form_bebida.botao_submit_bebida(class="btn btn-primary border mt-2") }}                  
+                </form>
+            </div>
+
+            
+            
+            
+
+        </div>
+        
+        
+    </div>
+    
+    
+{% endblock body %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Carrinho{% endblock title %}
+
+
+
+{% block body %}
+<div class="container mt-5">
+    <h3>Seu Pedido</h3>
+    <ul>
+        {% for pedido in pedidos %}
+            <li>
+                <strong>{{ pedido.nome_item }}</strong> -
+                Quantidade: {{ pedido.quantidade_item }} -
+                Total: R$ {{ pedido.valor_total | round(2) }}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock body %}

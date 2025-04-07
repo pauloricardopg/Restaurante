@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Carrinho{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <h2>Carrinho de Compras</h2>
+
+    {% if carrinho %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Qtd</th>
+                <th>Preço unitário</th>
+                <th>Total</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in carrinho %}
+            <tr>
+                <td>{{ item.nome }}</td>
+                <td>{{ item.tipo }}</td>
+                <td>{{ item.quantidade }}</td>
+                <td>R$ {{ item.preco_unitario | round(2) }}</td>
+                <td>R$ {{ item.valor_total | round(2) }}</td>
+                <td>
+                    <form method="POST" action="{{ url_for('remover_item_carrinho') }}">
+                        <input type="hidden" name="item_id" value="{{ item.id }}">
+                        <button type="submit" class="btn btn-danger btn-sm">Remover</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4" class="text-end"><strong>Total:</strong></td>
+                <td colspan="2"><strong>R$ {{ total_geral | round(2) }}</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <form method="POST">
+        <button type="submit" class="btn btn-success">Finalizar Pedido</button>
+    </form>
+{% else %}
+    <p>Seu carrinho está vazio.</p>
+{% endif %}
+
+</div>
+{% endblock body %}

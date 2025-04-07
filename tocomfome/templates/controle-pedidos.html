@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Controle de Pedidos{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Pedidos em Preparação</h2>
+
+    {% if pedidos_preparando %}
+        {% for grupo in pedidos_preparando %}
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between">
+                    <div>
+                        <strong>Código do Pedido:</strong> {{ grupo[0].codigo_pedido }}<br>
+                        <strong>Cliente:</strong> {{ grupo[0].usuario.nome }}<br>
+                        <strong>Data:</strong> {{ grupo[0].data_criacao.strftime('%d/%m/%Y %H:%M') }}
+                    </div>
+                    <form method="POST">
+                        <input type="hidden" name="codigo_pedido" value="{{ grupo[0].codigo_pedido }}">
+                        <button type="submit" class="btn btn-success">Marcar como Pronto</button>
+                    </form>
+                </div>
+                <ul class="list-group list-group-flush">
+                    {% for item in grupo %}
+                        <li class="list-group-item">
+                            {{ item.nome_item }} x{{ item.quantidade_item }} - R$ {{ item.valor_total | round(2) }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-center">Nenhum pedido em preparação no momento.</p>
+    {% endif %}
+
+    <h2 class="text-center mb-4">Pedidos Prontos</h2>
+
+    {% if pedidos_prontos %}
+        {% for grupo in pedidos_prontos %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <strong>Código do Pedido:</strong> {{ grupo[0].codigo_pedido }}<br>
+                    <strong>Cliente:</strong> {{ grupo[0].usuario.nome }}<br>
+                    <strong>Data:</strong> {{ grupo[0].data_criacao.strftime('%d/%m/%Y %H:%M') }}
+                </div>
+                <ul class="list-group list-group-flush">
+                    {% for item in grupo %}
+                        <li class="list-group-item">
+                            {{ item.nome_item }} x{{ item.quantidade_item }} - R$ {{ item.valor_total | round(2) }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-center">Nenhum pedido pronto no momento.</p>
+    {% endif %}
+</div>
+{% endblock %}

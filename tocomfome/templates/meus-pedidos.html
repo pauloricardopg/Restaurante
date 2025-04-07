@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Meus Pedidos{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Meus Pedidos</h2>
+
+    {% if pedidos_agrupados %}
+        {% for codigo, grupo in pedidos_agrupados.items() %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <strong>Pedido:</strong> {{ codigo }}<br>
+                    <strong>Data:</strong> {{ grupo[0].data_criacao.strftime('%d/%m/%Y %H:%M') }}<br>
+                    <strong>Status:</strong> {{ grupo[0].status }}
+                </div>
+                <ul class="list-group list-group-flush">
+                    {% for item in grupo %}
+                        <li class="list-group-item">
+                            {{ item.nome_item }} x{{ item.quantidade_item }} — R$ {{ item.valor_total | round(2) }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-center">Você ainda não fez nenhum pedido.</p>
+    {% endif %}
+</div>
+{% endblock %}

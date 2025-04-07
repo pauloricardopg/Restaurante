@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Apagar Pratos{% endblock title %}
+
+
+
+{% block body %}
+    <div class="container">    
+        <form method="POST" action="">
+            {{ form_excluir.csrf_token }}
+            <fieldset>
+                <div class="form-group">
+                    {{ form_excluir.nome.label(class="form-label") }}
+                    {{ form_excluir.nome(class="form-control", placeholder="Digite o nome do prato, sobremesa ou bebida") }}
+                </div>
+                {{ form_excluir.botao_submit_excluir(class="btn btn-danger border mt-2") }}
+            </fieldset>
+        </form>     
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Cardápio</h2>
+        <div class="row g-4">
+            <!-- Pratos -->
+            <div class="col-md-4">
+                <div class="menu-card">
+                    <h3 class="menu-title">Pratos</h3>
+                    <ul class="menu-list list-unstyled">
+                        {% for prato in pratos %}
+                            <li class="border border-5 p-4 mt-2">
+                                <strong>Nome:</strong> {{ prato.nome }}<br>
+                                <strong>Preço:</strong> R$ {{ prato.preco | round(2) }}<br>
+                                <strong>Ingredientes:</strong> {{ prato.ingrediente }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <!-- Sobremesas -->
+            <div class="col-md-4">
+                <div class="menu-card">
+                    <h3 class="menu-title">Sobremesas</h3>
+                    <ul class="menu-list list-unstyled">
+                        {% for sobremesa in sobremesas %}
+                                <li class="border border-5 p-4 mt-2">
+                                    <strong>Nome:</strong> {{ sobremesa.nome }}<br>
+                                    <strong>Preço:</strong> R$ {{ sobremesa.preco | round(2) }}<br>
+                                    <strong>Ingredientes:</strong> {{ sobremesa.ingrediente }}
+                                </li>
+                                
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <!-- Bebidas -->
+            <div class="col-md-4">
+                <div class="menu-card">
+                    <h3 class="menu-title">Bebidas</h3>
+                    <ul class="menu-list list-unstyled">
+                        {% for bebida in bebidas %}
+                                <li class="border border-5 p-4 mt-2">
+                                    <strong>Nome:</strong> {{ bebida.nome }}<br>
+                                    <strong>Preço:</strong> R$ {{ bebida.preco | round(2) }}<br>
+                                    <strong>Teor Alcoolico:</strong> {{ bebida.teor_alcoolico}}%<br>
+                                </li>
+                                
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

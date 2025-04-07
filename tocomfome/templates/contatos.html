@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Contato{% endblock %}
+
+{% block body %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-lg-6">
+        <div class="text-center border rounded p-4 bg-light shadow-sm">
+            <h4 class="mb-4">Fale Conosco</h4>
+            <p class="mb-3">Escolha uma das opções abaixo para entrar em contato conosco:</p>
+
+            <div class="d-grid gap-3">
+                <!-- Email -->
+                <a href="mailto:tocomfome@mail.com" class="btn btn-outline-primary d-flex justify-content-center align-items-center gap-2" target="_blank">
+                    <i class="fas fa-envelope fa-lg"></i> tocomfome@mail.com
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/t0c0mf0m3" class="btn btn-outline-danger d-flex justify-content-center align-items-center gap-2" target="_blank">
+                    <i class="fab fa-instagram fa-lg"></i> @t0c0mf0m3
+                </a>
+
+                <!-- Telefone -->
+                <a href="tel:+552730303030" class="btn btn-outline-dark d-flex justify-content-center align-items-center gap-2" target="_blank">
+                    <i class="fas fa-phone fa-lg"></i> (27) 3030-3030
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5527999999999" class="btn btn-success d-flex justify-content-center align-items-center gap-2" target="_blank">
+                    <i class="fab fa-whatsapp fa-lg"></i> Fale pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

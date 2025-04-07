@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Menu{% endblock title %}
+
+{% block body %}
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Cardápio</h2>
+        <div class="row g-4">
+            <!-- Pratos -->
+            <div class="col-md-4">
+                <div class="menu-card">
+                    <h3 class="menu-title">Pratos</h3>
+                    <ul class="menu-list list-unstyled">
+                        {% for prato in pratos %}
+                            <li class="border border-5 p-4 mt-2">
+                                <strong>Nome:</strong> {{ prato.nome }}<br>
+                                <strong>Preço:</strong> R$ {{ prato.preco | round(2) }}<br>
+                                <strong>Ingredientes:</strong> {{ prato.ingrediente }}
+                                <form method="POST" action="" class="p-4 mt-2">
+                                    {{ form_quantidade.csrf_token }}
+                                    <input type="hidden" name="tipo_item" value="prato">
+                                    {{ form_quantidade.item_id(value=prato.id_prato) }}
+                                    <fieldset>
+                                        {{ form_quantidade.quantidade_prato.label(class="form-control-label") }}
+                                        {{ form_quantidade.quantidade_prato(class="form-control") }}
+                                    </fieldset>
+                                    {{ form_quantidade.botao_submit(class="btn btn-primary border mt-2") }}
+                                </form>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <!-- Sobremesas -->
+            <div class="col-md-4">
+                <div class="menu-card">
+                    <h3 class="menu-title">Sobremesas</h3>
+                    <ul class="menu-list list-unstyled">
+                        {% for sobremesa in sobremesas %}
+                            <li class="border border-5 p-4 mt-2">
+                                <strong>Nome:</strong> {{ sobremesa.nome }}<br>
+                                <strong>Preço:</strong> R$ {{ sobremesa.preco | round(2) }}<br>
+                                <strong>Ingredientes:</strong> {{ sobremesa.ingrediente }}
+                                <form method="POST" action="" class="p-4 mt-2">
+                                    {{ form_quantidade.csrf_token }}
+                                    <input type="hidden" name="tipo_item" value="sobremesa">
+                                    {{ form_quantidade.item_id(value=sobremesa.id_sobremesa) }}
+                                    <fieldset>
+                                        {{ form_quantidade.quantidade_sobremesa.label(class="form-control-label") }}
+                                        {{ form_quantidade.quantidade_sobremesa(class="form-control") }}
+                                    </fieldset>
+                                    {{ form_quantidade.botao_submit(class="btn btn-primary border mt-2") }}
+                                </form>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <!-- Bebidas -->
+            <div class="col-md-4">
+                <div class="menu-card">
+                    <h3 class="menu-title">Bebidas</h3>
+                    <ul class="menu-list list-unstyled">
+                        {% for bebida in bebidas %}
+                            <li class="border border-5 p-4 mt-2">
+                                <strong>Nome:</strong> {{ bebida.nome }}<br>
+                                <strong>Preço:</strong> R$ {{ bebida.preco | round(2) }}<br>
+                                <strong>Teor Alcoólico:</strong> {{ bebida.teor_alcoolico }}%<br>
+                                <form method="POST" action="" class="p-4 mt-2">
+                                    {{ form_quantidade.csrf_token }}
+                                    <input type="hidden" name="tipo_item" value="bebida">
+                                    {{ form_quantidade.item_id(value=bebida.id_bebida) }}
+                                    <fieldset>
+                                        {{ form_quantidade.quantidade_bebida.label(class="form-control-label") }}
+                                        {{ form_quantidade.quantidade_bebida(class="form-control") }}
+                                    </fieldset>
+                                    {{ form_quantidade.botao_submit(class="btn btn-primary border mt-2") }}
+                                </form>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
