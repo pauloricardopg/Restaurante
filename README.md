@@ -85,8 +85,8 @@ Este é um sistema completo para gerenciamento de pedidos de um restaurante, des
 ![MeusPedidos](https://github.com/user-attachments/assets/77890853-9e34-46e8-a529-bc75a067f878)
 
 ---
-
-### ➕ Inserção de Pratos, Sobremesas e Bebidas
+ 
+### ➕ Inserção de Pratos, Sobremesas e Bebidas (funcionário)
 ![InserirProdutos](https://github.com/user-attachments/assets/2e20a1c2-77b5-40ce-b707-9a2f0dc62cc8)
 
 ---
@@ -96,7 +96,7 @@ Este é um sistema completo para gerenciamento de pedidos de um restaurante, des
 
 ---
 
-### 🧑‍🍳 Painel de Controle de Pedidos
+### 🧑‍🍳 Painel de Controle de Pedidos (funcionário)
 ![Controle de pedidos](https://github.com/user-attachments/assets/25197b93-4657-4293-91f4-c2ae07e547b9)
 
 
