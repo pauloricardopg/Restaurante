@@ -39,7 +39,7 @@ Este é um sistema completo para gerenciamento de pedidos de um restaurante, des
 
 ## 🧠 Tecnologias Utilizadas
 
-- **Python 3.11
+- **Python 3.11**
 - **Flask**
 - **Flask-WTF** (validação de formulários)
 - **Flask-Login** (autenticação)
