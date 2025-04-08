@@ -51,6 +51,9 @@ Este é um sistema completo para gerenciamento de pedidos de um restaurante, des
 ---
 
 ## 🔒 Usuários de Teste
-- Tipo	Email	Senha
-- Cliente	cliente@teste.com	123456
-- Funcionário	funcionario@teste.com	123456
+
+| Tipo        | Email                   | Senha   |
+|-------------|--------------------------|---------|
+| 🧍 Cliente  | cliente@teste.com        | 123456  |
+| 🛠️ Funcionário | funcionario@teste.com     | 123456  |
+
