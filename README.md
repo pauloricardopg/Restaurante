@@ -61,23 +61,8 @@ Este é um sistema completo para gerenciamento de pedidos de um restaurante, des
 
 ## 📸 Layout (Exemplos)
 
-### 🧑‍🍳 Painel de Controle de Pedidos
-![Controle de pedidos](https://github.com/user-attachments/assets/25197b93-4657-4293-91f4-c2ae07e547b9)
-
----
-
-### 📦 Histórico do Cliente - Meus Pedidos
-![MeusPedidos](https://github.com/user-attachments/assets/77890853-9e34-46e8-a529-bc75a067f878)
-
----
-
-### 💳 Tela de Pagamento
-![Pagamento](https://github.com/user-attachments/assets/daa4bcdf-a81a-43f3-9e67-5d507c00505e)
-
----
-
-### 🛒 Carrinho de Compras
-![Carrinho](https://github.com/user-attachments/assets/0bd1ad85-8847-4db7-bf6d-2e0c8f8d6382)
+### 🔐 Tela de Login e Criação de Conta
+![LoginECriarConta](https://github.com/user-attachments/assets/dafdcc5c-bc0f-4286-8cad-66a9a840e1a0)
 
 ---
 
@@ -86,8 +71,18 @@ Este é um sistema completo para gerenciamento de pedidos de um restaurante, des
 
 ---
 
-### ❌ Exclusão de Itens do Cardápio (funcionário)
-![ApagarProdutos](https://github.com/user-attachments/assets/98fdf152-ced3-4c2e-9f12-41192d2dee6b)
+### 🛒 Carrinho de Compras
+![Carrinho](https://github.com/user-attachments/assets/0bd1ad85-8847-4db7-bf6d-2e0c8f8d6382)
+
+---
+
+### 💳 Tela de Pagamento
+![Pagamento](https://github.com/user-attachments/assets/daa4bcdf-a81a-43f3-9e67-5d507c00505e)
+
+---
+
+### 📦 Histórico do Cliente - Meus Pedidos
+![MeusPedidos](https://github.com/user-attachments/assets/77890853-9e34-46e8-a529-bc75a067f878)
 
 ---
 
@@ -96,7 +91,29 @@ Este é um sistema completo para gerenciamento de pedidos de um restaurante, des
 
 ---
 
-### 🔐 Tela de Login e Criação de Conta
-![LoginECriarConta](https://github.com/user-attachments/assets/dafdcc5c-bc0f-4286-8cad-66a9a840e1a0)
+### ❌ Exclusão de Itens do Cardápio (funcionário)
+![ApagarProdutos](https://github.com/user-attachments/assets/98fdf152-ced3-4c2e-9f12-41192d2dee6b)
+
+---
+
+### 🧑‍🍳 Painel de Controle de Pedidos
+![Controle de pedidos](https://github.com/user-attachments/assets/25197b93-4657-4293-91f4-c2ae07e547b9)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
