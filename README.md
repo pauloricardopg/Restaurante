@@ -39,7 +39,7 @@ Este é um sistema completo para gerenciamento de pedidos de um restaurante, des
 
 ## 🧠 Tecnologias Utilizadas
 
-- **Python 3.x**
+- **Python 3.11
 - **Flask**
 - **Flask-WTF** (validação de formulários)
 - **Flask-Login** (autenticação)
@@ -48,4 +48,9 @@ Este é um sistema completo para gerenciamento de pedidos de um restaurante, des
 - **Bootstrap 5.3** (interface responsiva)
 - HTML, Jinja2, CSS (via Bootstrap)
 
+---
 
+## 🔒 Usuários de Teste
+- Tipo	Email	Senha
+- Cliente	cliente@teste.com	123456
+- Funcionário	funcionario@teste.com	123456
