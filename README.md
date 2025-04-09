@@ -99,7 +99,14 @@ Este é um sistema completo para gerenciamento de pedidos de um restaurante, des
 ### 🧑‍🍳 Painel de Controle de Pedidos (funcionário)
 ![Controle de pedidos](https://github.com/user-attachments/assets/25197b93-4657-4293-91f4-c2ae07e547b9)
 
+---
 
+## 📬 Contato
+
+Desenvolvido por **Paulo Ricardo Pereira Gomes**  
+📧 pauloricardo1705@gmail.com  
+🔗 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?logo=linkedin&style=flat-square)](https://linkedin.com/in/pauloricardopg)  
+🌐 [![Portfólio](https://img.shields.io/badge/Portfólio-Acessar-informational?style=flat-square&logo=internet-explorer)](https://web-production-4f4b3.up.railway.app/)
 
 
 
